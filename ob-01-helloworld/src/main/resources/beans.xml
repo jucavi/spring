@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Scope por defecto es singleton, con el scope prototype se crea un nuevo objeto cada vez que se inyecta el objeto -->
+    <bean id="calculatorService" class="com.example.CalculatorService" scope="prototype">
+    </bean>
+
+    <bean id="gestorFacturas" class="com.example.GestorFacturas">
+        <constructor-arg name="calculatorService" ref="calculatorService" />
+        <constructor-arg name="nombre" value="Facturator 3000" />
+    </bean>
+</beans>

@@ -1,10 +1,14 @@
 package com.example.ob04restdatajpa.controllers;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HolaMundoController {
+public class HelloController {
+
+    @Value("${app.message}")
+    String message;
 
     /**
      * For testing documentation purposes
@@ -12,7 +16,7 @@ public class HolaMundoController {
      */
     @GetMapping("/hola")
     public String holaMundo() {
-        return "Hola Mundo que tal va todo chavales";
+        return message;
     }
 
     @GetMapping("/bootstrap")

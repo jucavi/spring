@@ -29,7 +29,7 @@ El acceso se puede realizar dede Postman o Navegador
 ## Documentar con swagger
 1. https://springdoc.org/#spring-data-rest-support
 2. Incluirla en el POM
-3. Modificar /application.properties.xml según la documentación
+3. Modificar /application.properties según la documentación
 * Para personalizar la información de la documentación en necesario crear un @bean (referirse al main de esta aplicación)
 
 ## Testing de la aplicación con JUnit5
@@ -44,5 +44,11 @@ El acceso se puede realizar dede Postman o Navegador
 ![Drag Racing](build-compile.png)
 3. Artefacto .jar en carpeta target
 4. java -jar target/application-name.jar
+
+### Perfiles de configuración
+1. Creando variables de configuración (application.properties)
+   * application.properties -> app.message=Hola Mundo
+   * Con la anotación @Value("${app.message}") String message (ver HelloController)
+
 
 ## Deploy a Heroku

@@ -45,10 +45,19 @@ El acceso se puede realizar dede Postman o Navegador
 3. Artefacto .jar en carpeta target
 4. java -jar target/application-name.jar
 
-### Perfiles de configuración
+### Perfiles y variables de configuración
 1. Creando variables de configuración (application.properties)
    * application.properties -> app.message=Hola Mundo
    * Con la anotación @Value("${app.message}") String message (ver HelloController)
-
+2. Creando perfiles de congiguración
+   * Crear un nuevo archivo application-<*sufijo*>.properties
+   * configuración específica
+   * En el archivo application.properties
+     * spring.profiles.active=<*sufijo*>
+3. Utilizando varables de entorno
+   * app.varentorno=${USERNAME} 
+     * USERNAME: Key del varable de entorno
+   * Para ver varables de entorno System.getenv()
+   
 
 ## Deploy a Heroku

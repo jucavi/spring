@@ -8,6 +8,7 @@ class Ob04RestDatajpaApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println(System.getenv());
 	}
 
 }

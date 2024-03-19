@@ -26,3 +26,8 @@ El acceso se puede realizar dede Postman o Navegador
 3. File > Settings > Build, Execution, Deployment > Compiler
    * Check "Build project automatically"
 
+## Documentar con swagger
+1. https://springdoc.org/#spring-data-rest-support
+2. Incluirla en el POM
+3. Modificar /application.properties.xml según la documentación
+* Para personalizar la información de la documentación en necesario crear un @bean (referirse al main de la aplicación)

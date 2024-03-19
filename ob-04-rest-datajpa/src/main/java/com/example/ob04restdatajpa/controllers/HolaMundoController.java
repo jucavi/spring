@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HolaMundoController {
 
+    /**
+     * For testing documentation purposes
+     * @return
+     */
     @GetMapping("/hola")
     public String holaMundo() {
         return "Hola Mundo que tal va todo chavales";

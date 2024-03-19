@@ -2,6 +2,7 @@ package com.example.ob04restdatajpa.controllers;
 
 import com.example.ob04restdatajpa.entities.Book;
 import com.example.ob04restdatajpa.repositories.BookRepository;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -25,6 +26,12 @@ public class BookController {
 
     // CRUD sobre la entidad Book
     // Buscar todos los libros
+
+    /**
+     * Testing Swagger documentation
+     * @return
+     */
+    @Tag(name="Get all books")
     @GetMapping("/api/books")
     public List<Book> findAll() {
         // recuperar y devolver los libros de la base de datos

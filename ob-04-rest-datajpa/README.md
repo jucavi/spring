@@ -48,16 +48,44 @@ El acceso se puede realizar dede Postman o Navegador
 ### Perfiles y variables de configuración
 1. Creando variables de configuración (application.properties)
    * application.properties -> app.message=Hola Mundo
-   * Con la anotación @Value("${app.message}") String message (ver HelloController)
+   * Con la anotación
+
+*application.properties*
+```
+   spring.profiles.active=<*sufijo*>
+```
+*HelloController.java*
+```java
+   @Value("${app.message}")
+   String message 
+```
 2. Creando perfiles de congiguración
    * Crear un nuevo archivo application-<*sufijo*>.properties
    * configuración específica
    * En el archivo application.properties
-     * spring.profiles.active=<*sufijo*>
-3. Utilizando varables de entorno
-   * app.varentorno=${USERNAME} 
-     * USERNAME: Key del varable de entorno
-   * Para ver varables de entorno System.getenv()
-   
 
-## Deploy a Heroku
+*application.properties*
+```
+   spring.profiles.active=<*sufijo*>
+```
+   * Modificar el POM ver https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+```xml
+   <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-resources-plugin</artifactId>
+       <version>3.3.1</version>
+       <configuration>
+           <propertiesEncoding>ISO-8859-1</propertiesEncoding>
+       </configuration>
+   </plugin>
+```
+3. Utilizando varables de entorno
+```
+   app.varentorno=${USERNAME}
+```
+      USERNAME: Key del varable de entorno
+   * Para ver varables de entorno
+```java
+    System.getenv()
+``` 
+

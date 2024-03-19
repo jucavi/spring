@@ -30,4 +30,19 @@ El acceso se puede realizar dede Postman o Navegador
 1. https://springdoc.org/#spring-data-rest-support
 2. Incluirla en el POM
 3. Modificar /application.properties.xml según la documentación
-* Para personalizar la información de la documentación en necesario crear un @bean (referirse al main de la aplicación)
+* Para personalizar la información de la documentación en necesario crear un @bean (referirse al main de esta aplicación)
+
+## Testing de la aplicación con JUnit5
+### Testing de controladores
+1. Anotación 
+   * @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+2. Ver test/java/com/exmple/ob04restdatajpa/controllers/BookControllerTest
+
+## Build de la aplicación (Generación de artefactos)
+1. https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+2. Creando el artefacto
+![Drag Racing](build-compile.png)
+3. Artefacto .jar en carpeta target
+4. java -jar target/application-name.jar
+
+## Deploy a Heroku

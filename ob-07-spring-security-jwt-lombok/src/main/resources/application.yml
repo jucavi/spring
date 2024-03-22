@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ob_spring
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  sql:
+    init-mode: always
+
+app:
+  jwt-secret: QhzargoSktG3Sb4MpkSkkGgqUQYttNRNp3qJwRrBs3hoYbX3ps7dYcqDkqyHN92BQnbapqs9SeefrQ3wNbHgJA6HQz5wCKCcSosCQq
+  jwt-expiration: 86400000

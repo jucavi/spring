@@ -1,2 +1,7 @@
-package com.example.ob07springsecurityjwt.controller;public class AuthController {
+package com.example.ob07springsecurityjwt.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class AuthController {
 }

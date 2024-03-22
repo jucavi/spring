@@ -4,7 +4,7 @@
 * Spring web
 * Spring boot devtools
 * Spring Data JPA
-* PostgreSQL Driver
+* PostgreSQL Driver or MySQLDriver
 * Spring Security
 
 2. Agregar al POM
@@ -42,7 +42,7 @@
 PostgreSQL
 ```
 # Configuración POSTGRESQL
-spring.datasource.url=jdbc:postgresql://localhost:5432/obspring
+spring.datasource.url=jdbc:postgresql://localhost:5432/ob_spring
 spring.datasource.username=postgres
 spring.datasource.password=postgres
 spring.datasource.driver-class-name=org.postgresql.Driver
@@ -60,7 +60,7 @@ spring.jpa.defer-datasource-initialization=true
 MySQL
 ```
 # Configuración POSTGRESQL
-spring.datasource.url=jdbc:postgresql://localhost:5432/obspring
+spring.datasource.url=jdbc:postgresql://localhost:5432/ob_spring
 spring.datasource.username=postgres
 spring.datasource.password=postgres
 spring.datasource.driver-class-name=org.postgresql.Driver
